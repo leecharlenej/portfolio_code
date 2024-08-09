@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <!-- About Me-->
+        <div class ="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="/img/me.jpeg" alt="profile picture" width ="250" height = "250" class = "rounded-circle">
+            </div>
+            <p></p>
+            <p>
+                Hi there (: My name is Charlene and I was a Math educator for 9 years before I decided to make tech my career.
+                <br><br>
+                When I was a kid, I played around with HTML and Adobe Photoshop a lot because of Neopets and wanted to be a web designer. But life happened and I decided to pursue my other love, Math, and decided to spread that love as a junior college lecturer.
+                <br><br>
+                But tech was always on my mind and when the opportunity came to join a cybersecurity traineeship at a local bank, I took it! As an ex-discipline level head, I think it is important to recognize that cybersecurity allows us to enjoy the improvements that tech can bring into our lives. So with that, I began my 1.5-year journey as a SOC L1 Duty Analyst and a Cybersecurity Engineer.
+                <br><br>
+                During this time, I noticed that there was a lot of manual work. Not only was it tedious and time-consuming, it was also prone to errors. There had to be an easier way to do this! And this was when I discovered the world of VBA and macros. 
+                I would spent weekends watching YouTube videos and coming up with my own scripts that helped to halve the amount of admin work we had. And it was so much fun that I decided that I wanted a formal education in computing.
+                <br><br>
+                So here I am now, a student at NUS doing Masters in Computing. It has been challenging but at the same time, it is also fun learning all these cool stuff. I am also very fortunate to be a recipient of the CSA-National Cybersecurity R&D Lab Scholarship (Thank you!). This website was created so that I could explore Angular and at the same time, to house all my projects.
+                <br><br>
+                I hope you enjoy looking around and please feel free to <a class="text-secondary" routerLink="/contact" routerLinkActive="text-dark">contact me</a>.
+
+            
+            </p>
+
+        </div>
+
+        <!-- Featured Project-->
+        <div class ="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Project</h2>
+                <h4>{{featuredProject.name}}</h4>
+            </div>
+
+            <carousel>
+                <div *ngFor="let picture of featuredProject.pictures">
+                    <slide><img src={{picture}} alt="slide" style="display: block; width: 100%;"></slide>
+                </div>
+            </carousel>
+
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>Visit the portfolio section to learn more!</p>
+
+        </div>
+
+    </div>
+</div>
